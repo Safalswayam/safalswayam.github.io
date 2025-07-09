@@ -1,0 +1,50 @@
+/* animation.css */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  animation: fadeInUp 1s ease-in;
+}
+
+header h1, header p {
+  animation: slideIn 1s ease-out;
+}
+
+.section {
+  animation: fadeInUp 0.8s ease-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project {
+  animation: fadeInUp 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+footer {
+  animation: fadeInUp 1s ease;
+}
