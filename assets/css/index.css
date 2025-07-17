@@ -399,7 +399,13 @@ a {
     padding: 2rem;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
-
+.skills-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between skill items */
+    flex-wrap: nowrap; /* Optional: prevents wrapping */
+    align-items: center;
+}
 .skill-item {
     display: flex;
     flex-direction: column;
