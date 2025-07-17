@@ -374,9 +374,11 @@ a {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between skill items */
+    flex-wrap: nowrap; /* Optional: prevents wrapping */
+    align-items: center;
 }
 
 /* Libraries & Frameworks section */
