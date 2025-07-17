@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+	<link rel="icon" type="image/png" href="../assets/favicon.webp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/beast_projects.css">
+
+    <meta property="og:title" content="Safal's Portfolio">
+    <meta property="og:url" content="https://prathameshv07.github.io/portfolio/">
+    <meta property="og:image" content="https://prathameshv07.github.io/portfolio/assets/favicon.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:description" content="Welcome to my portfolio!">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>All Projects</h1>
+            <nav>
+                <a href="../index.html#projects">Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-container">
+                <h2>Filter By:</h2>
+                <div class="filter-groups">
+                    <div class="filter-group">
+                        <h3>Tools</h3>
+                        <div class="filter-options">
+                            <select name="tool" id="tool-filter">
+                                <option value="">All Tools</option>
+                                <!-- Will be dynamically populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Technique</h3>
+                        <div class="filter-options">
+                            <select name="technique" id="technique-filter">
+                                <option value="">All Techniques</option>
+                                <!-- Will be dynamically populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Industry</h3>
+                        <div class="filter-options">
+                            <select name="industry" id="industry-filter">
+                                <option value="">All Industries</option>
+                                <!-- Will be dynamically populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="clear-filters">Clear Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="all-projects" id="projects">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- McDonald's  (First Position) -->
+                <div class="project-card main-project" data-project="project1" id="mcdonald" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img class="responsive-image" src="assets/project_image/mcDonals.png" alt="McDonald"><!-- size: 600x400 -->
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title fw-bold">McDonald's Menu Analysis</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">Seaborn</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Plotly</span>
+                            <span class="project-tag">StatsModel</span>
+                            <span class="project-tag">Scikit-Learn</span>
+                            <span class="project-tag">Isolation Forest</span>
+                            <span class="project-tag">Linear Regression</span> 
+                            <span class="project-tag">LightGBM</span>                               
+                        </div>
+                        <p></strong> Conducted data visualization and nutritional analysis of McDonald's menu items to uncover insights on calories, protein, and fat distribution across categories using Python and Matplotlib.</p>
+                        <div class="project-buttons">
+                            <a href="./pages/mc_donald.html" class="btn btn-secondary btn-sm">View Project &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sentiment Analysis Project (Second Position) -->
+                <div class="project-card" data-project="project1" id="nl2sql" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img class="responsive-image" src="assets/project_image/Sentiment analysis.jpg" alt="nl2sql"><!-- size: 600x400 -->
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Play Store Sentiment Analysis</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Jupyter Notebook</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Seaborn</span>
+                            <span class="project-tag">EDA</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Correlation Analysis</span>
+                        </div>
+                        <p>This project involves <b>Play Store Metrics Analysis</b> using <span class="project-tag">Python</span> for extracting insights from social media engagement data. It leverages powerful data libraries like 
+                            <span class="project-tag">Pandas</span>, <span class="project-tag">NumPy</span>, and <span class="project-tag">Matplotlib</span> to perform <b>Exploratory Data Analysis (EDA)</b> and visualize patterns across downloads, users, and user engagement. 
+                            The goal is to uncover <b>correlations</b> between features such as <b>install, reviews, shares, comments</b>, and their <b>overall reach</b>, helping in optimizing content strategy.</p>
+                        <div class="project-buttons">
+                            <!-- <a href="./pages/aquasense.html" target="_blank" onclick="event.stopPropagation()" class="btn btn-secondary btn-sm">View Project</a> -->
+                            <a href="./pages/playstore-sentiment.html" class="btn btn-secondary btn-sm">View Project &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AquaSense Project (Third Position) -->
+                <div class="project-card" data-project="project2" id="playstore" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img class="responsive-image" src="assets/project_image/house_prediction.png" alt="playstore"><!-- size: 600x400 -->
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Housing Price Prediction</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Linear Regression</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">NumPy</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Seaborn</span>
+                            <span class="project-tag">Data Preprocessing</span>
+                            <span class="project-tag">Feature Engineering</span>
+                            <span class="project-tag">Model Evaluation</span>
+                        </div>
+                        <p>A <b>Machine Learning</b> based project that predicts <b>house prices</b> by analyzing key features like <b>area, location, number of rooms</b>, and more. The model helps in estimating accurate property values using <b>regression techniques</b>.</p>
+
+                        <div class="project-buttons">
+                            <!-- <a href="./pages/aquasense.html" target="_blank" onclick="event.stopPropagation()" class="btn btn-secondary btn-sm">View Project</a> -->
+                            <a href="./pages/house_price.html" class="btn btn-secondary btn-sm">View Project &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- EDA Retail Project (Fourth Position) -->
+                <div class="project-card" data-project="project3" id="eda" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img class="responsive-image" src="assets/project_image/exploratory-data-analysis.jpg" alt="eda"><!-- size: 600x400 -->
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Exploratory Data Analysis on Retail Sales</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">EDA</span>
+                            <span class="project-tag">Retail Analytics</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Time Series Analysis</span>
+                            <span class="project-tag">Sales Forecasting</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Seaborn</span>
+
+                            <!-- <span class="project-tag">Google Search API</span>
+                            <span class="project-tag">KMP Algorithm</span> -->
+                        </div>
+                        <p>An <b>Exploratory Data Analysis</b> project focused on uncovering insights from <b>retail sales data</b>. It identifies <b>sales trends</b>, analyzes <b>store performance</b>, and detects <b>seasonal patterns</b> to support better <b>business decisions</b>.</p>
+                        <div class="project-buttons">
+                            <!-- <a href="./pages/aquasense.html" target="_blank" onclick="event.stopPropagation()" class="btn btn-secondary btn-sm">View Project</a> -->
+                            <a href="./pages/eda.html" class="btn btn-secondary btn-sm">View Project &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project CodeX -->
+                <div class="project-card" data-project="brain" data-tools="powerbi" data-techniques="data-analysis,data-visualization,market-analysis" data-industry="retail,food-beverage" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="../assets/project_images/brain.jpg" alt="brain">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Brain Tumor Detection</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Deep Learning</span>
+                            <span class="project-tag">CNN</span>
+                            <span class="project-tag">Medical Imaging</span>
+                            <span class="project-tag">Image Classification</span>
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Keras</span>
+                            <span class="project-tag">Brain Tumor Detection</span>
+                            <span class="project-tag">Computer Vision</span>
+                        </div>
+                        <p>A <b>Deep Learning</b> project designed to detect <b>brain tumors</b> from MRI scans using <b>Convolutional Neural Networks (CNN)</b>. The model classifies images into tumor and non-tumor categories, supporting early <b>medical diagnosis</b> through <b>automated image analysis</b>.</p>
+
+                        <a href="brain.html" class="project-link">View Project &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project Fake News -->
+                <div class="project-card" data-project="fake" data-tools="python" data-techniques="data-analysis,data-visualization" data-industry="retail" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="../assets/project_images/Fake_News_Detection_Project.avif" alt="fake">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Fake_News_Detection</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Fake News Detection</span>
+                            <span class="project-tag">Text Classification</span>
+                            <span class="project-tag">Logistic Regression</span>
+                            <span class="project-tag">TF-IDF</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Natural Language Processing</span>
+                        </div>
+                        <p>A <b>Machine Learning</b> based solution to detect and classify <b>fake news articles</b> using <b>Natural Language Processing (NLP)</b>. The model analyzes news content and predicts its authenticity using <b>text vectorization</b> and <b>classification algorithms</b>.</p>
+
+                        <a href="fake.html" class="project-link">View Project &nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Safal Swayam - Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/beast_projects.js"></script>
+</body>
+</html>
