@@ -1,3 +1,4 @@
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -374,12 +375,9 @@ a {
 }
 
 .skills-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 1.5rem;
 }
 
 /* Libraries & Frameworks section */
@@ -400,6 +398,7 @@ a {
     padding: 2rem;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
+
 .skill-item {
     display: flex;
     flex-direction: column;
@@ -442,7 +441,7 @@ a {
 }
 
 /* Responsive adjustments */
-/* @media (max-width: 992px) {
+@media (max-width: 992px) {
     .skills-container {
         flex-direction: column;
     }
@@ -450,7 +449,7 @@ a {
     .skill-category {
         margin-bottom: 2rem;
     }
-} */
+}
 
 /* Project Title */
 .main-project-title {
