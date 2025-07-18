@@ -105,13 +105,10 @@ const words = [
     "Data Analysis",
     "Machine Learning",
     "Artificial Intelligence",
-    "Vector Search",
-    "Large Language Models",
-    "Computer Vision",
+    "Data Visualization",
     "NLP",
-    "SQL & Database Engineering",
-    "Python Development",
-    "Web Development"
+    "SQL",
+    "Python Development"
 ];
 
 let wordIndex = 0;
