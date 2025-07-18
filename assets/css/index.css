@@ -442,7 +442,7 @@ a {
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .skills-container {
         flex-direction: column;
     }
@@ -450,7 +450,7 @@ a {
     .skill-category {
         margin-bottom: 2rem;
     }
-}
+} */
 
 /* Project Title */
 .main-project-title {
