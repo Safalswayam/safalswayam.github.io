@@ -29,6 +29,8 @@ Welcome to my portfolio! I am a passionate **Master's student in Computer Applic
 
 ## 📜 **Certifications**
 <div align="center">
+  <img src="assets/certificates/OracleAnalystCloud.png" alt="Oracle Analyst Professional" width="200"/>  
+  <img src="assets/certificates/OracleDataScience.png" alt="Oracle Data Science" width="200"/>
   <img src="assets/certificates/tata_data_visualization.png" alt="Tata Certificate" width="200"/>  
   <img src="assets/certificates/ibm_data_fundamental.png" alt="IBM Certificate" width="200"/>  
   <img src="assets/certificates/deloitte_data_analytis.png" alt="Deloitte Certificate" width="200"/>  
