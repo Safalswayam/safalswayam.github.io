@@ -7,7 +7,7 @@ Welcome to my portfolio! I am a passionate **Master's student in Computer Applic
 ## 🧑‍💻 **About Me**
 - 🎓 **MCA Student** at *Kalinga Institute of Industrial Technology (KIIT)*  
 - 🔥 Skilled in **Python, AI/ML, Web Scraping, and Data Visualization**  
-- 🏆 Certified by **Tata, IBM, Deloitte, and Microsoft**  
+- 🏆 Certified by **Oracle, Tata, IBM, Deloitte, and Microsoft**  
 - 🎯 **Goal**: To become a **leading AI Expert** and build impactful projects.
 
 ---
@@ -35,7 +35,8 @@ Welcome to my portfolio! I am a passionate **Master's student in Computer Applic
   <img src="assets/certificates/deloitte_data_analytis.png" alt="Deloitte Certificate" width="200"/>  
 </div>
 
-- **Data Visualization** – Tata
+- **Oracle Analyst Cloud Professional** – Oracle
+- **Oracle Data Science Professional** – Oracle
 - **Data Fundamentals** – IBM  
 - **Data Analytics Job Simulation** – Deloitte   
 
