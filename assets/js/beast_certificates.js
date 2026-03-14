@@ -1,17 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS animation library
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    });
+    if (typeof AOS !== 'undefined' && typeof AOS.init === 'function') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    }
     
     // Filter variables
     const categoryFilter = document.getElementById('category-filter');
     const platformFilter = document.getElementById('platform-filter');
     const clearFiltersBtn = document.querySelector('.clear-filters');
     const certificateCards = document.querySelectorAll('.certificate-card');
+    if (!categoryFilter || !platformFilter || !clearFiltersBtn) {
+        console.warn('Certificate filter controls not found. Skipping filter initialization.');
+        return;
+    }
     
     // Update default option text to match design
     categoryFilter.options[0].textContent = "All Categories";

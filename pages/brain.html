@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="../assets/css/project_pages.css">
     <!-- Add any additional stylesheets here -->
 
-    <meta property="og:title" content="Safal's Portfolio">
-    <meta property="og:url" content="https://safalswayam.github.io-portfolio/">
-    <meta property="og:image" content="https://safalswayam.github.io-portfolio/assets/sslogo.jpg">
+    <meta property="og:title" content="Brain Tumor Detection - Safal's Portfolio">
+    <meta property="og:url" content="https://safalswayam.github.io/pages/brain.html">
+    <meta property="og:image" content="https://safalswayam.github.io/assets/sslogo.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:description" content="Welcome to my portfolio!">
+    <meta property="og:description" content="Brain tumor detection project using CNNs on MRI scans.">
 </head>
 <body>
     <div class="project-detail-container">
         <div class="project-detail-header">
-            <button class="close-button">&times;</button>
+            <button class="close-button" aria-label="Close project details">&times;</button>
             <div class="project-detail-image">
-                <img class="responsive-image" src="./assets/project_images/brain.jpg" alt="brain">
+                <img class="responsive-image" src="../assets/project_image/brain.jpg" alt="brain">
             </div>
             <h1 class="project-detail-title">Brain Tumor Detection</h1>
         </div>
@@ -41,57 +41,63 @@
             <div class="project-description">
                 <h2>Project Overview</h2>
                 <p>
-                    This project focuses on <b>Fake News Detection</b> using <b>Machine Learning</b> and <b>Natural Language Processing (NLP)</b> techniques. It aims to classify online news content as <b>real or fake</b> by analyzing textual features and applying effective classification models. The solution helps in combating misinformation and enhancing content credibility across digital platforms.
+                    This project builds a <b>deep learning pipeline</b> to detect <b>brain tumors</b> from MRI images using <b>Convolutional Neural Networks (CNNs)</b>. The model classifies scans into tumor and non-tumor categories to support faster and more consistent medical image screening.
                 </p>
             
                 <h2>Key Insights</h2>
                 <ul>
-                    <li>Textual Feature Analysis:
+                    <li><strong>Image-Level Pattern Learning:</strong>
                         <ul>
-                            <li>Identification of word patterns and frequency distributions</li>
-                            <li>Use of <b>TF-IDF</b> vectorization for meaningful term extraction</li>
-                            <li>Detection of common linguistic cues in fake articles</li>
+                            <li>Learned tumor-relevant visual features directly from MRI images</li>
+                            <li>Captured spatial texture differences between tumor and non-tumor scans</li>
+                            <li>Improved robustness through preprocessing and normalization</li>
                         </ul>
                     </li>
-                    <li>Model Performance:
+                    <li><strong>Model Performance:</strong>
                         <ul>
-                            <li>High accuracy in classifying fake vs real news using <b>Logistic Regression</b></li>
-                            <li>Confusion matrix and precision-recall metrics for evaluation</li>
-                            <li>Effectiveness of preprocessing and feature extraction steps</li>
+                            <li>Trained and validated a CNN-based classifier for binary tumor detection</li>
+                            <li>Evaluated model quality with confusion matrix and classification metrics</li>
+                            <li>Tracked training and validation curves to monitor generalization</li>
                         </ul>
                     </li>
-                    <li>Data Insights:
+                    <li><strong>Clinical Relevance:</strong>
                         <ul>
-                            <li>Distribution of fake and real news in the dataset</li>
-                            <li>Highlighting bias and sentiment trends in fake news content</li>
-                            <li>Text length correlation with news credibility</li>
+                            <li>Supports early screening workflows with automated image classification</li>
+                            <li>Helps prioritize suspicious scans for expert review</li>
+                            <li>Demonstrates practical AI use in healthcare imaging</li>
                         </ul>
                     </li>
-                </ul>                
+                </ul>
 
                 <h2>Technical Implementation</h2>
-                <p>The solution is implemented in <b>Python</b> using <b>Scikit-learn</b> and <b>NLP pipelines</b>. Major components include:</p>
+                <p>The solution is implemented in <b>Python</b> with <b>TensorFlow/Keras</b> for CNN training and image processing:</p>
                 <ul>
-                    <li>Text preprocessing (lowercasing, punctuation removal, stopword filtering)</li>
-                    <li>Vectorization using <b>TF-IDF</b> for feature representation</li>
-                    <li>Model training using <b>Logistic Regression</b> and other classifiers</li>
-                    <li>Evaluation with accuracy, F1-score, and ROC-AUC</li>
-                    <li>Split strategy: Train-test validation with reproducible results</li>
+                    <li>Organized MRI images into class-wise directories (<b>yes/no</b>)</li>
+                    <li>Used data loaders and augmentation to improve training diversity</li>
+                    <li>Built a CNN architecture with convolution, pooling, dense, and dropout layers</li>
+                    <li>Trained with binary classification loss and validated on held-out data</li>
+                    <li>Evaluated model behavior through accuracy trends and confusion analysis</li>
+                </ul>
+
+                <h2>Technical Challenges Solved</h2>
+                <ul>
+                    <li>Handled variability in scan quality and contrast across samples</li>
+                    <li>Reduced overfitting risk with dropout and data augmentation</li>
+                    <li>Balanced model capacity and inference speed for practical use</li>
                 </ul>
             
                 <h2>Results & Recommendations</h2>
-                <p>The project successfully demonstrated the ability to detect fake news with strong model performance. Suggested improvements include:</p>
+                <p>The project demonstrates that CNNs can effectively detect tumor patterns in MRI scans. Recommended next steps include:</p>
                 <ul>
-                    <li>Incorporation of <b>deep learning models</b> for better generalization</li>
-                    <li>Integration with web apps or browser extensions for real-time detection</li>
-                    <li>Use of larger datasets with multilingual support for wider applicability</li>
-                    <li>Ongoing training with up-to-date data to handle evolving fake news trends</li>
+                    <li>Expanding the dataset and adding multi-class tumor subtype classification</li>
+                    <li>Applying explainability tools (e.g., Grad-CAM) for clinical interpretability</li>
+                    <li>Packaging inference into a lightweight web app for assisted diagnosis workflows</li>
                 </ul>
             </div>
 
             
             <div class="project-links">
-                <a href="https://github.com/Safalswayam/Breast_Cancer_Detection_with_Logistic_Regression.git" class="btn btn-secondary">GitHub&nbsp;<i class="fab fa-github"></i></a>
+                <a href="https://github.com/Safalswayam/Brain-Tumor-Detection-Using-CNN.git" class="btn btn-secondary">GitHub&nbsp;<i class="fab fa-github"></i></a>
             </div>
         </div>
     </div>

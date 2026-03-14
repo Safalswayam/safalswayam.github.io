@@ -93,12 +93,14 @@
 // All Projects Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS animation library
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    });
+    if (typeof AOS !== 'undefined' && typeof AOS.init === 'function') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    }
     
     // Elements
     const projectCards = document.querySelectorAll('.project-card');
@@ -106,6 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const techniqueFilter = document.getElementById('technique-filter');
     const industryFilter = document.getElementById('industry-filter');
     const clearFiltersButton = document.querySelector('.clear-filters');
+    if (!toolFilter || !techniqueFilter || !industryFilter || !clearFiltersButton) {
+        console.warn('Project filter controls not found. Skipping filter initialization.');
+        return;
+    }
 
     // Collect all unique filter values
     const tools = new Set();

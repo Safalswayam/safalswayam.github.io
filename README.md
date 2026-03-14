@@ -1,60 +1,44 @@
-# 🌟 Safal Swayam – Portfolio
+# Safal Swayam Portfolio
 
-Welcome to my portfolio! I am a passionate **Master's student in Computer Applications (MCA)** with expertise in **AI, Machine Learning, Data Analytics, and Web Technologies**.
+This repository contains the source code for my personal portfolio website:
+https://safalswayam.github.io/
 
----
+## About
 
-## 🧑‍💻 **About Me**
-- 🎓 **MCA Student** at *Kalinga Institute of Industrial Technology (KIIT)*  
-- 🔥 Skilled in **Python, AI/ML, Web Scraping, and Data Visualization**  
-- 🏆 Certified by **Oracle, Tata, IBM, Deloitte, and Microsoft**  
-- 🎯 **Goal**: To become a **leading AI Expert** and build impactful projects.
+I am pursuing a Master in Computer Application (MCA) at Kalinga Institute of
+Industrial Technology (KIIT), with interests in:
 
----
+- Data analysis and visualization
+- Machine learning and deep learning
+- NLP and applied AI projects
 
-## 🛠 **Skills**
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" title="Python"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="50" title="TensorFlow"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="50" title="Pandas"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="50" title="NumPy"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="50" title="GitHub"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" title="JavaScript"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="50" title="SQL/MySQL"/>  
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="50" title="Docker"/>  
-  <img src="https://cdn-icons-png.flaticon.com/512/732/732222.png" width="50" title="Power BI"/>  
-</div>
+## Featured Projects
 
----
+- McDonald's Menu Analysis
+- Play Store Sentiment Analysis
+- Housing Price Prediction
+- Exploratory Data Analysis on Retail Sales
+- Brain Tumor Detection Using CNN
+- Fake News Detection Using NLP
 
-## 📜 **Certifications**
-<div align="center">
-  <img src="assets/certificates/OracleAnalystCloud.png" alt="Oracle Analyst Professional" width="200"/>  
-  <img src="assets/certificates/OracleDataScience.png" alt="Oracle Data Science" width="200"/>  
-  <img src="assets/certificates/ibm_data_fundamental.png" alt="IBM Certificate" width="200"/>  
-  <img src="assets/certificates/deloitte_data_analytis.png" alt="Deloitte Certificate" width="200"/>  
-</div>
+## Certificates Highlighted
 
-- **Oracle Analyst Cloud Professional** – Oracle
-- **Oracle Data Science Professional** – Oracle
-- **Data Fundamentals** – IBM  
-- **Data Analytics Job Simulation** – Deloitte   
+- IBM Data Fundamentals (via Credly)
+- Oracle Analyst Cloud Professional
+- Oracle Data Science Professional
+- Tata Group Data Visualization (Forage)
+- Deloitte Data Analytics (Forage)
 
----
+## Tech Stack Used in This Site
 
-## 🚀 **Highlighted Projects**
-- **Netflix Content Analysis** – Exploratory data analysis and visualization.  
-- **Fake News Detection** – ML models to identify fake news.  
-- **Face Restoration with GANs** – StyleGAN-based image restoration.  
-- **Tumor Detection** – CNN and Transformer-based AI for medical imaging.  
+- HTML, CSS, JavaScript
+- Font Awesome
+- AOS (Animate On Scroll)
+- Particles.js
 
----
+## Contact
 
-## 📫 **Contact Me**
-- **Email**: [safalswayam@gmail.com](mailto:safalswayam@gmail.com)  
-- **LinkedIn**: [linkedin.com/in/safalswayam](https://www.linkedin.com/in/safal-swayam-530025304)  
-- **GitHub**: [github.com/safalswayam](https://github.com/safalswayam)  
+- Email: safalswayam@gmail.com
+- LinkedIn: https://www.linkedin.com/in/safal-swayam-530025304/
+- GitHub: https://github.com/Safalswayam
 
----
-
-### *“Innovation happens when passion meets technology.”*

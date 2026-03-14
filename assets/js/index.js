@@ -1,103 +1,117 @@
 function openModal(event) {
     // Ensure modal only opens if clicked outside buttons
     const modal = document.getElementById("project-modal");
-    modal.style.display = "block";
+    if (modal) {
+        modal.style.display = "block";
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 35,
-                "density": {
-                    "enable": true,
-                    "value_area": 400
-                }
-            },
-            "color": {
-                "value": "#ffffff"  /* Default color for nodes */
-            },
-            "shape": {
-                "type": "circle"
-            },
-            "opacity": {
-                "value": 0.7,
-                "random": false
-            },
-            "size": {
-                "value": 3,
-                "random": true
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.6,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 2,
-                "direction": "none",
-                "out_mode": "out"
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "grab"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 180,
-                    "line_linked": {
-                        "opacity": 1,
-                        "color": "#e9b321" /* Nodes turn orange when cursor is near */
+    if (typeof particlesJS === 'function') {
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 35,
+                    "density": {
+                        "enable": true,
+                        "value_area": 400
                     }
                 },
-                "bubble": {
-                    "distance": 200,
-                    "size": 10,
-                    "duration": 2
+                "color": {
+                    "value": "#ffffff"  /* Default color for nodes */
                 },
-                "repulse": {
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": false
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
                     "distance": 150,
-                    "duration": 0.4
+                    "color": "#ffffff",
+                    "opacity": 0.6,
+                    "width": 1
                 },
-                "push": {
-                    "particles_nb": 4
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "out_mode": "out"
                 }
-            }
-        },
-        "retina_detect": true
-    });
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 180,
+                        "line_linked": {
+                            "opacity": 1,
+                            "color": "#e9b321" /* Nodes turn orange when cursor is near */
+                        }
+                    },
+                    "bubble": {
+                        "distance": 200,
+                        "size": 10,
+                        "duration": 2
+                    },
+                    "repulse": {
+                        "distance": 150,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    } else {
+        console.warn('particlesJS is not available. Skipping particle background initialization.');
+    }
     
     // Initialize AOS animation library
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: false,
-        mirror: true,
-        offset: 50,
-        delay: 0,
-        anchorPlacement: 'top-bottom',
-        disable: 'mobile'
-    });
+    if (typeof AOS !== 'undefined' && typeof AOS.init === 'function') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            offset: 50,
+            delay: 0,
+            anchorPlacement: 'top-bottom',
+            disable: 'mobile'
+        });
+    } else {
+        console.warn('AOS is not available. Skipping scroll animation initialization.');
+    }
 
     // Call adjust images for responsive images
-    adjustImagesByClass('responsive-image');
+    if (typeof adjustImagesByClass === 'function') {
+        adjustImagesByClass('responsive-image');
+    }
     
     // Also run this when window loads to ensure images are properly handled
     window.addEventListener('load', function() {
-        adjustImagesByClass('responsive-image');
+        if (typeof adjustImagesByClass === 'function') {
+            adjustImagesByClass('responsive-image');
+        }
     });
 });
 
@@ -165,7 +179,9 @@ function toggleSection(sectionType) {
     document.getElementById(sectionType + '-content').classList.add('active');
     
     // Add active class to clicked button
-    event.target.classList.add('active');
+    if (typeof event !== 'undefined' && event && event.target) {
+        event.target.classList.add('active');
+    }
 }
 
 function toggleSectionFromDropdown(sectionType) {
@@ -183,21 +199,27 @@ function toggleSectionFromDropdown(sectionType) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
+    if (!contactForm) {
+        console.warn('Contact form with id "contactForm" not found. Skipping validation setup.');
+        return;
+    }
     
     // Validation patterns
     const patterns = {
-        name: /^[a-zA-Z\s]{2,30}$/,                                        // Letters and spaces, 2-30 chars
+        name: /^[a-zA-Z\s'-]{2,40}$/,                                      // Letters, spaces, apostrophes, hyphens
         email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,         // Standard email format validation
-        subject: /^.{5,100}$/,                                             // Any characters, 5-100 chars
-        message: /^[\s\S]{10,1000}$/                                       // Any characters (incl. newlines), 10-1000 chars
+        inquiry: /.+/,                                                      // Must select one option
+        subject: /^.{5,120}$/,                                             // Any characters, 5-120 chars
+        message: /^[\s\S]{20,1500}$/                                       // Any characters (incl. newlines), 20-1500 chars
     };
     
     // Error messages
     const errorMessages = {
-        name: 'Please enter a valid name (2-30 characters, letters only)',
+        name: 'Please enter a valid name (2-40 characters)',
         email: 'Please enter a valid email address',
-        subject: 'Subject must be between 5-100 characters',
-        message: 'Message must be between 10-1000 characters'
+        inquiry: 'Please select an inquiry type',
+        subject: 'Project / role title must be between 5-120 characters',
+        message: 'Project details must be between 20-1500 characters'
     };
     
     // Create error message elements
@@ -214,7 +236,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add error elements after each input
     document.querySelectorAll('#contactForm .form-group').forEach(group => {
-        const input = group.querySelector('input, textarea');
+        const input = group.querySelector('input, textarea, select');
+        if (!input || !input.id || !errorMessages[input.id]) {
+            return;
+        }
         const errorElement = createErrorElement(input.id);
         errorElement.textContent = errorMessages[input.id];
         group.appendChild(errorElement);
@@ -225,6 +250,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const value = field.value.trim();
         const pattern = patterns[field.id];
         const errorElement = document.getElementById(`${field.id}-error`);
+        if (!pattern || !errorElement) {
+            return true;
+        }
         
         if (pattern && !pattern.test(value)) {
             field.style.borderColor = '#ff3838';
@@ -238,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Add input event listeners to each field for real-time validation
-    document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(field => {
+    document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
         field.addEventListener('input', function() {
             validateField(this);
         });
@@ -256,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validate all fields
         let isValid = true;
         
-        document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(field => {
+        document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
             if (!validateField(field)) {
                 isValid = false;
             }
@@ -293,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Create success notification
                 const successNotification = document.createElement('div');
                 successNotification.className = 'success-notification';
-                successNotification.textContent = 'Thank you! Your message has been sent successfully.';
+                successNotification.textContent = 'Thank you! Your inquiry has been sent successfully.';
                 successNotification.style.backgroundColor = '#4CAF50';
                 successNotification.style.color = 'white';
                 successNotification.style.padding = '10px';
@@ -305,13 +333,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Reset the form
                 contactForm.reset();
-                document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(field => {
+                document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
                     field.style.borderColor = '';
                 });
                 
                 // Reset the submit button
                 submitButton.disabled = false;
-                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
                 
                 // Remove the notification after 5 seconds
                 setTimeout(() => {
@@ -337,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Reset the submit button
                 submitButton.disabled = false;
-                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
                 
                 // Remove the notification after 5 seconds
                 setTimeout(() => {

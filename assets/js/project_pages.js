@@ -2,10 +2,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Close button functionality
     const closeButton = document.querySelector('.close-button');
-    
+    const projectDetailContainer = document.querySelector('.project-detail-container');
+    if (!closeButton || !projectDetailContainer) {
+        console.warn('Project detail controls not found. Skipping page interactions.');
+        return;
+    }
+
     closeButton.addEventListener('click', function() {
         // Close the project detail page
-        const projectDetailContainer = document.querySelector('.project-detail-container');
         projectDetailContainer.classList.remove('active');
         
         // After animation completes, navigate back if possible
@@ -15,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // Check referrer and redirect accordingly
                 if (document.referrer.includes("index.html")) {
-                    window.location.href = "/index.html#projects";
+                    window.location.href = "../index.html#projects";
                 } else {
                     window.location.href = "beast_projects.html#projects";
                 }
@@ -24,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Make the project detail page active when loaded
-    const projectDetailContainer = document.querySelector('.project-detail-container');
     projectDetailContainer.classList.add('active');
     
     // Check if the adjustImagesByClass function exists (from project-images.js)
